@@ -2,8 +2,8 @@ package fr.unilim.iut.kataparrot;
 
 public class EuropeanParrot extends Parrot {
 	
-	public EuropeanParrot(ParrotTypeEnum _type, int numberOfCoconuts, double voltage) {
-		super(_type, voltage, false);
+	public EuropeanParrot(ParrotTypeEnum _type, double voltage) {
+		super(_type, voltage);
 	}
 
 	@Override

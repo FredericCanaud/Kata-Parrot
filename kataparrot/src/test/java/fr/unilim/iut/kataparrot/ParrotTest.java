@@ -7,7 +7,7 @@ public class ParrotTest {
 
 	@Test
 	public void getSpeedOfEuropeanParrot() {
-		Parrot parrot = new EuropeanParrot(ParrotTypeEnum.EUROPEAN, 0, 0);
+		Parrot parrot = new EuropeanParrot(ParrotTypeEnum.EUROPEAN, 0);
 		assertEquals(12.0, parrot.getSpeed(), 0.0);
 	}
 
@@ -31,19 +31,19 @@ public class ParrotTest {
 
 	@Test
 	public void getSpeedNorwegianBlueParrot_nailed() {
-		Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, true);
+		Parrot parrot = new NorwegianBlueParrot(ParrotTypeEnum.NORWEGIAN_BLUE, 0, true);
 		assertEquals(0.0, parrot.getSpeed(), 0.0);
 	}
 
 	@Test
 	public void getSpeedNorwegianBlueParrot_not_nailed() {
-		Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 1.5, false);
+		Parrot parrot = new NorwegianBlueParrot(ParrotTypeEnum.NORWEGIAN_BLUE, 1.5, false);
 		assertEquals(18.0, parrot.getSpeed(), 0.0);
 	}
 
 	@Test
 	public void getSpeedNorwegianBlueParrot_not_nailed_high_voltage() {
-		Parrot parrot = new Parrot(ParrotTypeEnum.NORWEGIAN_BLUE, 4, false);
+		Parrot parrot = new NorwegianBlueParrot(ParrotTypeEnum.NORWEGIAN_BLUE, 4, false);
 		assertEquals(24.0, parrot.getSpeed(), 0.0);
 	}
 }

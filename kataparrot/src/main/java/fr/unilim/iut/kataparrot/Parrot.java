@@ -3,13 +3,11 @@ package fr.unilim.iut.kataparrot;
 public class Parrot {
 
 	private ParrotTypeEnum type;
-	private double voltage;
-	private boolean isNailed;
+	protected double voltage;
 
-	public Parrot(ParrotTypeEnum _type, double voltage, boolean isNailed) {
+	public Parrot(ParrotTypeEnum _type, double voltage) {
 		this.type = _type;
 		this.voltage = voltage;
-		this.isNailed = isNailed;
 	}
 
 	public double getSpeed() {
@@ -19,8 +17,7 @@ public class Parrot {
 		case AFRICAN:
 			throw new RuntimeException("Should be unreachable");
 		case NORWEGIAN_BLUE:
-			return (isNailed) ? 0 : getBaseSpeed(voltage);
-		}
+			throw new RuntimeException("Should be unreachable");		}
 		throw new RuntimeException("Should be unreachable");
 	}
 
