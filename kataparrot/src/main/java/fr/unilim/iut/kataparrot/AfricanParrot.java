@@ -6,8 +6,7 @@ public class AfricanParrot extends Parrot {
 
 	private static final double AFRICAN_PARROT_LOAD_FACTOR = 9.0;
 	
-	public AfricanParrot(ParrotTypeEnum _type, int numberOfCoconuts) {
-		super(_type);
+	public AfricanParrot(int numberOfCoconuts) {
 		this.numberOfCoconuts = numberOfCoconuts;
 	}
 	
