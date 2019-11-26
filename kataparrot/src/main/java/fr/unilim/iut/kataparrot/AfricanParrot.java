@@ -6,13 +6,13 @@ public class AfricanParrot extends Parrot {
 
 	private static final double AFRICAN_PARROT_LOAD_FACTOR = 9.0;
 	
-	public AfricanParrot(ParrotTypeEnum _type, int numberOfCoconuts, double voltage) {
-		super(_type, voltage);
+	public AfricanParrot(ParrotTypeEnum _type, int numberOfCoconuts) {
+		super(_type);
 		this.numberOfCoconuts = numberOfCoconuts;
 	}
 	
 	@Override
 	public double getSpeed() {
-		return Math.max(0, getBaseSpeed() - AFRICAN_PARROT_LOAD_FACTOR * numberOfCoconuts);
+		return Math.max(0, BASE_SPEED - AFRICAN_PARROT_LOAD_FACTOR * numberOfCoconuts);
 	}
 }
